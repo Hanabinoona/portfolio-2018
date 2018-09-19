@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css?family=Didact+Gothic');
+@font-face {
+    font-family: "roboto";
+    src: url('../fonts/roboto/Roboto-Light.ttf');
+    }
+*{
+	margin: 0;
+	padding : 0;
+}
+header{
+	height: 100vh;
+    width: 100%;
+    background: url(../img/home2.jpg) center ;
+	background-size: cover;
+}
+header a{
+	justify-content: center;
+	display: flex;
+}
+#nom1{
+    width: 100vw;
+}
+.arrow-down{
+    position: absolute;
+    z-index: 5;
+    bottom: 50px;
+    transform: scale(1);
+	transition : 0.3s;
+}
+.arrow-down:hover{
+	transform: scale(1.8);
+	transition : 0.3s;
+}
+h2{
+	font-family: 'roboto', serif;
+    text-transform: uppercase;
+	font-size: 1.1em;
+}
+p{
+	font-family: Didact Gothic;
+	font-size: 1.1em;
+}
+#moi a, #projet a{
+	color: #C30043;
+	text-decoration: none;
+}
+#moi a:hover, #projet a:hover{
+	text-decoration: underline;
+}
+#nom2{
+	display: none;
+}
+/* nav*/
+.menu{
+	position: absolute;
+	background: #C30043;
+	height: 100vh;
+	width: 80px;
+	text-align: center;
+}
+.menu.fixed{
+	position: fixed;
+	top:0;
+	left: 0;
+	z-index: 1000;
+}
+#logo{
+	margin-top: 20px;
+	padding-left: 3px;
+	margin-bottom: 30px;
+}
+#listeMenu a{
+	margin-top : 60px;
+	text-decoration: none;
+	color: white;
+	writing-mode: vertical-lr;
+ 	text-orientation: sideways;
+  transform: rotate(180deg);
+}
+.navBar{
+	display: none;
+}
+.position{
+	display: flex;
+}
+/*section*/
+.intro{
+	height: 100vh;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+}
+/* article*/
+#introMoi{
+	margin-left: 300px;
+	width: 600px;
+	height: 200px;
+}
+#introMoi p{
+	margin-bottom: 20px;
+}
+/*image*/
+#photo{
+	width: 300px;
+	height: 300px;
+	border-radius: 50%;
+	margin-left: 100px;
+}
+
+/*slider photos*/
+.slideshow {
+	margin-left: 5%;
+ 	width: 95%;
+	height: 110vh;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+.slides {
+	position: relative;
+	width: 80%;
+	height: 75%;
+	display: flex;
+	align-items: center;
+}
+.prev, .next {
+	cursor: pointer;
+	padding: 10px;
+	transform: scale(1);
+	transition : 0.3s;
+}
+.prev:hover, .next:hover{
+	transform: scale(1.8);
+	transition : 0.3s;
+}
+.hidden {
+	opacity: 0;
+	cursor: default;
+}
+.slide {
+  position: absolute;
+  transition: 2s;
+  display: flex;
+  visibility: hidden;
+  opacity: 0;
+  width: 100%;
+  margin-left: 80px;
+  align-items: center;
+}
+.slide img{
+    max-width: 500px;
+}
+.slide .petitPlus{
+	flex-wrap: wrap;
+    margin-left: 150px;
+    max-width: 400px;
+}
+.slide .petitPlus p{
+    padding-bottom: 5px;
+}
+.active {
+  visibility: visible;
+  opacity: 1;
+}
+.fa{
+  color: #C30043;
+}
+#contact{
+	width: 100%;
+  	height: 200px;
+  	display: flex;
+  	align-items: center;
+  	justify-content: space-around;
+}
+#contact .fa{
+	font-size: 2.5em;
+}
+#contact a{
+	text-decoration: none;
+	cursor: pointer;
+	padding: 10px;
+}
+#contact .flex{
+	display: flex;
+	justify-content: space-between;
+	width: 450px;
+}
+#contact #rose{
+	color: #C30043;
+}
+
+.underline{
+	border-left: 1px solid white;
+	margin-right: 10px;
+}
+
+@media screen and (max-width: 1300px){
+	#introMoi, #photo{
+        margin-left: 0;
+    }
+    nav{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1020px){
+    .slide{
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width: 890px){
+    .intro{
+        justify-content: center;
+        padding-top: 10px;
+    }
+}
+
+@media screen and (max-width: 620px){
+    #introMoi{
+        width: 300px;
+        height: auto;
+    }
+    #photo{
+        width: 200px;
+        height: 200px;
+    }
+    .slide{
+        flex-wrap: wrap;
+        margin-left: 20%;
+        width:auto;
+    }
+    .slide .petitPlus{
+        margin-left: 0;
+        box-sizing: border-box;
+        margin-top: 20px;
+    }
+    .slide img{
+        max-width: 300px;
+    }
+}

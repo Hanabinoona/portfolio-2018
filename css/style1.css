@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css?family=Didact+Gothic');
+@font-face {
+    font-family: "roboto";
+    src: url('../fonts/roboto/Roboto-Light.ttf');
+    }
+*{
+	margin: 0;
+	padding : 0;
+}
+/*slider photos*/
+.slideshow {
+ 	width: 95%;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+    margin-left: 35px;
+}
+.slides {
+	position: relative;
+	width: 90%;
+	height: 75%;
+	display: flex;
+	align-items: center;
+}
+.prev, .next {
+	cursor: pointer;
+	padding: 10px;
+	transform: scale(1);
+	transition : 0.3s;
+}
+.prev:hover, .next:hover{
+	transform: scale(1.8);
+	transition : 0.3s;
+}
+.hidden {
+	opacity: 0;
+	cursor: default;
+}
+.slide {
+  position: absolute;
+  transition: 2s;
+  display: flex;
+  visibility: hidden;
+  opacity: 0;
+  width: 100%;
+  align-items: center;
+}
+.active {
+  visibility: visible;
+  opacity: 1;
+}
+.fa{
+  color: #C30043;
+}
